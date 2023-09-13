@@ -1,0 +1,97 @@
+/* Form */
+
+.form {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	gap: 15px;
+	border: 1px solid #686868;
+	max-width: 1080px;
+	padding: 10px 15px;
+	border-radius: 2px;
+	background-color: #282828;
+	margin: 0 15px;
+}
+
+.form.error {
+	border-color: #D64852;
+	box-shadow: 0px 0px 6px #D64852;
+}
+
+input, button {
+	border-radius: 2px;
+	padding: 10px 15px;
+	font-size: 20px;
+}
+
+input {
+	flex: 1;
+	background-color: #333333;
+	border: 1px solid #686868;
+	color: #FFFFFF;
+	outline: none;
+}
+
+button {
+	background-color: #FFFFFF;
+	border: 0;
+	color: #333333;
+	cursor: pointer;
+	transition: transform 0.3s;
+}
+
+button:hover {
+	transform: scale(1.05);
+}
+/* Modal */
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: -1;
+}
+
+.modal.show {
+	z-index: 99;
+	-webkit-backdrop-filter: blur(3px);
+	        backdrop-filter: blur(3px);
+}
+
+.modal-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	background-color: #333333;
+	padding: 20px;
+	min-width: 200px;
+	min-height: 200px;
+	box-shadow: 0px 0px 6px #333333;
+	border-radius: 2px;
+	transform: scale(0);
+	transition: transform 0.3s;
+}
+
+.modal.show > .modal-container {
+	transform: scale(1);
+}
+
+.modal-container > input {
+	flex: unset;
+}
+body {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	justify-content: center;
+	align-items: center;
+	background-color: #000000;
+	color: #FFFFFF;
+}
